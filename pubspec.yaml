@@ -1,0 +1,48 @@
+name: flutter_pos_tab_custom
+description: "A new Flutter project."
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.4.3 <4.0.0"
+
+dependencies:
+  build_runner: ^2.4.8
+  cupertino_icons: ^1.0.6
+  dartz: ^0.10.1
+  esc_pos_utils_plus: ^2.0.3
+  fl_chart: ^0.69.0
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.6
+  flutter_svg: ^2.0.9
+  freezed: ^2.4.6
+  freezed_annotation: ^2.4.1
+  google_fonts: ^6.1.0
+  http: ^1.2.2
+  image_picker: ^1.0.4
+  intl: ^0.18.1
+  print_bluetooth_thermal: ^1.0.9
+  qr_flutter: ^4.1.0
+  shared_preferences: ^2.2.3
+  sqflite: ^2.3.3+1
+
+dev_dependencies:
+  build_runner: ^2.4.6
+  flutter_gen_runner: ^5.3.2
+  flutter_lints: ^3.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
+
+flutter_gen:
+  output: lib/core/assets/
+  integrations:
+    flutter_svg: true
