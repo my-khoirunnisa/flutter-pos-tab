@@ -15,7 +15,6 @@ import 'package:flutter_pos_tab_custom/presentation/home/widgets/product_card.da
 import '../../../core/assets/assets.gen.dart';
 import '../../../core/components/buttons.dart';
 import '../bloc/checkout/checkout_bloc.dart';
-import '../models/product_category.dart';
 import '../models/product_model.dart';
 import '../widgets/column_button.dart';
 import '../widgets/order_menu.dart';

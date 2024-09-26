@@ -5,7 +5,6 @@ import 'package:flutter_pos_tab_custom/core/constants/colors.dart';
 import 'package:flutter_pos_tab_custom/core/extentions/int_ext.dart';
 import 'package:flutter_pos_tab_custom/core/extentions/string_ext.dart';
 import 'package:flutter_pos_tab_custom/presentation/home/bloc/checkout/checkout_bloc.dart';
-import 'package:flutter_pos_tab_custom/presentation/home/models/product_model.dart';
 import 'package:flutter_pos_tab_custom/presentation/home/models/product_quantity.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

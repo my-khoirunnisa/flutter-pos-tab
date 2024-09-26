@@ -9,8 +9,6 @@ import 'package:flutter_pos_tab_custom/presentation/home/widgets/nav_item.dart';
 import 'package:flutter_pos_tab_custom/presentation/report/pages/report_page.dart';
 import 'package:flutter_pos_tab_custom/presentation/setting/pages/setting_page.dart';
 
-import '../../auth/pages/login_page.dart';
-
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
 

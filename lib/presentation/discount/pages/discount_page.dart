@@ -6,9 +6,7 @@ import 'package:flutter_pos_tab_custom/core/constants/colors.dart';
 import 'package:flutter_pos_tab_custom/presentation/discount/bloc/add_discount/add_discount_bloc.dart';
 import 'package:flutter_pos_tab_custom/presentation/discount/bloc/discount/discount_bloc.dart';
 import 'package:flutter_pos_tab_custom/presentation/discount/dialogs/edit_discount_dialog.dart';
-import 'package:flutter_pos_tab_custom/presentation/discount/models/discount_model.dart';
 import 'package:flutter_pos_tab_custom/presentation/discount/widgets/discount_card.dart';
-import 'package:flutter_pos_tab_custom/presentation/home/models/product_category.dart';
 
 import '../../../core/components/cashier_info.dart';
 import '../../../core/components/custom_text_field.dart';

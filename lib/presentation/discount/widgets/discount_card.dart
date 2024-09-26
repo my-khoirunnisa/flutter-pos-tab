@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pos_tab_custom/data/model/discount_response_model.dart';
-import 'package:flutter_pos_tab_custom/presentation/discount/models/discount_model.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../core/assets/assets.gen.dart';

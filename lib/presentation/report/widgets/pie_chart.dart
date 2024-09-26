@@ -39,31 +39,41 @@ class _PieChartSample2State extends State<PieChartSample2> {
           Expanded(
             child: AspectRatio(
               aspectRatio: 1,
-              child: PieChart(
-                PieChartData(
-                  pieTouchData: PieTouchData(
-                    touchCallback: (FlTouchEvent event, pieTouchResponse) {
-                      setState(() {
-                        if (!event.isInterestedForInteractions ||
-                            pieTouchResponse == null ||
-                            pieTouchResponse.touchedSection == null) {
-                          touchedIndex = -1;
-                          return;
-                        }
-                        touchedIndex = pieTouchResponse
-                            .touchedSection!.touchedSectionIndex;
-                      });
-                    },
-                  ),
-                  borderData: FlBorderData(
-                    show: false,
-                  ),
-                  sectionsSpace: 0,
-                  centerSpaceRadius: 40,
-                  sections: showingSections(
-                      widget.cash!, widget.qris!, widget.va!, widget.others!),
-                ),
-              ),
+              child: widget.cash == 0 &&
+                      widget.qris == 0 &&
+                      widget.va == 0 &&
+                      widget.others == 0
+                  ? const Center(
+                      child: Text(
+                      "No Data",
+                      style: TextStyle(color: AppColors.darkGrey),
+                    ))
+                  : PieChart(
+                      PieChartData(
+                        pieTouchData: PieTouchData(
+                          touchCallback:
+                              (FlTouchEvent event, pieTouchResponse) {
+                            setState(() {
+                              if (!event.isInterestedForInteractions ||
+                                  pieTouchResponse == null ||
+                                  pieTouchResponse.touchedSection == null) {
+                                touchedIndex = -1;
+                                return;
+                              }
+                              touchedIndex = pieTouchResponse
+                                  .touchedSection!.touchedSectionIndex;
+                            });
+                          },
+                        ),
+                        borderData: FlBorderData(
+                          show: false,
+                        ),
+                        sectionsSpace: 0,
+                        centerSpaceRadius: 40,
+                        sections: showingSections(widget.cash!, widget.qris!,
+                            widget.va!, widget.others!),
+                      ),
+                    ),
             ),
           ),
           Row(
@@ -107,8 +117,9 @@ class _PieChartSample2State extends State<PieChartSample2> {
         case 0:
           return PieChartSectionData(
             color: AppColors.green,
-            value: ((cash / (cash + qris + va + others)) * 100),
-            title: '${((cash / (cash + qris + va + others)) * 100).ceil()}%',
+            value: cash == 0 ? 0 : ((cash / (cash + qris + va + others)) * 100),
+            title:
+                '${cash == 0 ? 0 : ((cash / (cash + qris + va + others)) * 100).ceil()}%',
             radius: radius,
             titleStyle: TextStyle(
               fontSize: fontSize,
@@ -120,8 +131,9 @@ class _PieChartSample2State extends State<PieChartSample2> {
         case 1:
           return PieChartSectionData(
             color: AppColors.primary,
-            value: ((qris / (cash + qris + va + others)) * 100),
-            title: '${((qris / (cash + qris + va + others)) * 100).ceil()}%',
+            value: qris == 0 ? 0 : ((qris / (cash + qris + va + others)) * 100),
+            title:
+                '${qris == 0 ? 0 : ((qris / (cash + qris + va + others)) * 100).ceil()}%',
             radius: radius,
             titleStyle: TextStyle(
               fontSize: fontSize,
@@ -133,8 +145,9 @@ class _PieChartSample2State extends State<PieChartSample2> {
         case 2:
           return PieChartSectionData(
             color: Colors.green[800],
-            value: ((va / (cash + qris + va + others)) * 100),
-            title: '${((va / (cash + qris + va + others)) * 100).ceil()}%',
+            value: va == 0 ? 0 : ((va / (cash + qris + va + others)) * 100),
+            title:
+                '${va == 0 ? 0 : ((va / (cash + qris + va + others)) * 100).ceil()}%',
             radius: radius,
             titleStyle: TextStyle(
               fontSize: fontSize,
@@ -146,8 +159,11 @@ class _PieChartSample2State extends State<PieChartSample2> {
         case 3:
           return PieChartSectionData(
             color: Colors.grey,
-            value: ((others / (cash + qris + va + others)) * 100),
-            title: '${((others / (cash + qris + va + others)) * 100).ceil()}%',
+            value: others == 0
+                ? 0
+                : ((others / (cash + qris + va + others)) * 100),
+            title:
+                '${others == 0 ? 0 : ((others / (cash + qris + va + others)) * 100).ceil()}%',
             radius: radius,
             titleStyle: TextStyle(
               fontSize: fontSize,

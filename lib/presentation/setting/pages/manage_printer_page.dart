@@ -2,7 +2,6 @@ import 'package:esc_pos_utils_plus/esc_pos_utils_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_pos_tab_custom/core/constants/colors.dart';
-import 'package:flutter_pos_tab_custom/core/extentions/build_context_ext.dart';
 import 'package:print_bluetooth_thermal/print_bluetooth_thermal.dart';
 import '../widgets/menu_printer_button.dart';
 import '../widgets/menu_printer_content.dart';

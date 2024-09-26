@@ -9,7 +9,6 @@ import 'package:flutter_pos_tab_custom/presentation/report/widgets/pie_chart.dar
 import 'package:flutter_pos_tab_custom/presentation/report/widgets/weekly_line_chart.dart';
 import 'package:intl/intl.dart';
 
-import '../../../core/components/buttons.dart';
 import '../../../core/components/cashier_info.dart';
 import '../../../core/constants/colors.dart';
 import '../../home/widgets/column_button.dart';
@@ -128,44 +127,44 @@ class _ReportPageState extends State<ReportPage> {
                                 ),
                               ],
                             ),
-                            const SizedBox(height: 20),
-                            Row(
-                              children: [
-                                Flexible(
-                                  child: Container(
-                                    padding: const EdgeInsets.only(
-                                        left: 10, right: 10, bottom: 10),
-                                    decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(16),
-                                    ),
-                                    child: const WeeklyLineChart(),
-                                  ),
-                                ),
-                                const SizedBox(width: 18),
-                                Flexible(
-                                  child: Container(
-                                    padding: const EdgeInsets.only(
-                                        left: 10, right: 10, bottom: 10),
-                                    decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(16),
-                                    ),
-                                    child: const MonthlyLineChart(),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(height: 25),
-                            const Text(
-                              'Report After Sales.',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                            const SizedBox(height: 15),
+                            // const SizedBox(height: 20),
+                            // Row(
+                            //   children: [
+                            //     Flexible(
+                            //       child: Container(
+                            //         padding: const EdgeInsets.only(
+                            //             left: 10, right: 10, bottom: 10),
+                            //         decoration: BoxDecoration(
+                            //           color: Colors.white,
+                            //           borderRadius: BorderRadius.circular(16),
+                            //         ),
+                            //         child: const WeeklyLineChart(),
+                            //       ),
+                            //     ),
+                            //     const SizedBox(width: 18),
+                            //     Flexible(
+                            //       child: Container(
+                            //         padding: const EdgeInsets.only(
+                            //             left: 10, right: 10, bottom: 10),
+                            //         decoration: BoxDecoration(
+                            //           color: Colors.white,
+                            //           borderRadius: BorderRadius.circular(16),
+                            //         ),
+                            //         child: const MonthlyLineChart(),
+                            //       ),
+                            //     ),
+                            //   ],
+                            // ),
+                            // const SizedBox(height: 25),
+                            // const Text(
+                            //   'Report After Sales.',
+                            //   style: TextStyle(
+                            //     color: Colors.black,
+                            //     fontSize: 16,
+                            //     fontWeight: FontWeight.w600,
+                            //   ),
+                            // ),
+                            // const SizedBox(height: 15),
                             FilterTabBar(
                               tabTitles: const [
                                 'Today',
@@ -469,43 +468,43 @@ class _ReportPageState extends State<ReportPage> {
                               ],
                             ),
                             const SizedBox(height: 20),
-                            Row(
-                              children: [
-                                Flexible(
-                                  child: Container(
-                                    padding: const EdgeInsets.only(
-                                        left: 10, right: 10, bottom: 10),
-                                    decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(16),
-                                    ),
-                                    child: const WeeklyLineChart(),
-                                  ),
-                                ),
-                                const SizedBox(width: 18),
-                                Flexible(
-                                  child: Container(
-                                    padding: const EdgeInsets.only(
-                                        left: 10, right: 10, bottom: 10),
-                                    decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(16),
-                                    ),
-                                    child: const MonthlyLineChart(),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(height: 25),
-                            const Text(
-                              'Report After Sales.',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                            const SizedBox(height: 15),
+                            // Row(
+                            //   children: [
+                            //     Flexible(
+                            //       child: Container(
+                            //         padding: const EdgeInsets.only(
+                            //             left: 10, right: 10, bottom: 10),
+                            //         decoration: BoxDecoration(
+                            //           color: Colors.white,
+                            //           borderRadius: BorderRadius.circular(16),
+                            //         ),
+                            //         child: const WeeklyLineChart(),
+                            //       ),
+                            //     ),
+                            //     const SizedBox(width: 18),
+                            //     Flexible(
+                            //       child: Container(
+                            //         padding: const EdgeInsets.only(
+                            //             left: 10, right: 10, bottom: 10),
+                            //         decoration: BoxDecoration(
+                            //           color: Colors.white,
+                            //           borderRadius: BorderRadius.circular(16),
+                            //         ),
+                            //         child: const MonthlyLineChart(),
+                            //       ),
+                            //     ),
+                            //   ],
+                            // ),
+                            // const SizedBox(height: 25),
+                            // const Text(
+                            //   'Report After Sales.',
+                            //   style: TextStyle(
+                            //     color: Colors.black,
+                            //     fontSize: 16,
+                            //     fontWeight: FontWeight.w600,
+                            //   ),
+                            // ),
+                            // const SizedBox(height: 15),
                             FilterTabBar(
                               tabTitles: const [
                                 'Today',

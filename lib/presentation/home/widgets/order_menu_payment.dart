@@ -9,7 +9,6 @@ import 'package:flutter_pos_tab_custom/presentation/home/models/product_quantity
 import 'package:flutter_svg/svg.dart';
 
 import '../../../core/constants/variables.dart';
-import '../models/product_model.dart';
 
 class OrderMenuPayment extends StatelessWidget {
   final ProductQuantity data;

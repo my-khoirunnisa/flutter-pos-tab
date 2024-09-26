@@ -62,8 +62,8 @@ class _SettingPageState extends State<SettingPage> {
                     //     fontWeight: FontWeight.w600,
                     //   ),
                     // ),
-                    SizedBox(height: 30),
-                    ManagePrinterPage()
+                    const SizedBox(height: 30),
+                    const ManagePrinterPage()
                   ],
                 ),
               ),

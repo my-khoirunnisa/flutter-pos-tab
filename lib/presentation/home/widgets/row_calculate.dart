@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pos_tab_custom/core/extentions/int_ext.dart';
 
 class RowCalculate extends StatelessWidget {
   final String title;
