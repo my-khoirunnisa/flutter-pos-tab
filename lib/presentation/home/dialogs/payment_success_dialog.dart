@@ -2,11 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_pos_tab_custom/core/constants/colors.dart';
 import 'package:flutter_pos_tab_custom/core/extentions/int_ext.dart';
+import 'package:flutter_pos_tab_custom/data/datasource/auth_local_datasource.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:intl/intl.dart';
+import 'package:print_bluetooth_thermal/print_bluetooth_thermal.dart';
 
 import '../../../core/assets/assets.gen.dart';
 import '../../../core/components/buttons.dart';
+import '../../../data/dataoutputs/print_dataoutputs.dart';
 import '../bloc/bloc/order_bloc.dart';
 import '../bloc/checkout/checkout_bloc.dart';
 import '../models/product_quantity.dart';
@@ -213,7 +216,24 @@ class _PaymentSuccessDialogState extends State<PaymentSuccessDialog> {
               Flexible(
                 child: Button.filled(
                   onPressed: () async {
+                    final authData = await AuthLocalDatasource().getAuthData();
+                    final printValue =
+                        await PrintDataoutputs.instance.printOrder(
+                      widget.data,
+                      widget.totalQty,
+                      widget.totalPrice,
+                      'Cash',
+                      widget.totalPrice,
+                      authData.user!.name!,
+                      widget.totalDiscount,
+                      widget.totalTax,
+                      widget.subTotal,
+                      widget.normalPrice,
+                    );
+                    await PrintBluetoothThermal.writeBytes(printValue);
+                    // ignore: use_build_context_synchronously
                     Navigator.pop(context);
+                    // ignore: use_build_context_synchronously
                     Navigator.pop(context);
                   },
                   label: 'Print',

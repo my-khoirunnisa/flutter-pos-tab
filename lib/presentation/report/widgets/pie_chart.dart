@@ -45,9 +45,10 @@ class _PieChartSample2State extends State<PieChartSample2> {
                       widget.others == 0
                   ? const Center(
                       child: Text(
-                      "No Data",
-                      style: TextStyle(color: AppColors.darkGrey),
-                    ))
+                        "No Data",
+                        style: TextStyle(color: AppColors.darkGrey),
+                      ),
+                    )
                   : PieChart(
                       PieChartData(
                         pieTouchData: PieTouchData(
